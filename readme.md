@@ -6,12 +6,12 @@
 
 ##  Faire une Push
 
-* Faire le push
+*  D'abord faire une Pull
 <pre>git init</pre>
 <pre>git remote add origin https://github.com/M3HEENK-TECH/command-management-app.git</pre>
 <pre>git pull  https://github.com/M3HEENK-TECH/command-management-app.git master</pre>
 
-* Faire une Pull
+* Ensuite faire un push
 <pre>git add .</pre>
 <pre>git commit -m "Le message des changements"</pre>
 <pre>git push -u orign master</pre>
