@@ -29,11 +29,18 @@
 ## Fichier SQL de la base de donnees
  * Fichier : doc/bd.sql
  
-## Base  de donnees 
-* Creer la base de donnees et lancer les migration
+### Demarrer l'application : Executer les commandes suivantes
+* Creer le fichier de configuration laravel
+<pre>
+ cp .env.example .env
+</pre>
+* Creer la base de donnees
 <pre>
 mysql -u root -p  -e "create database command_app2020"
 </pre>
+* lancer les migration
 <pre>
 php artisan migrate
 </pre>
+
+

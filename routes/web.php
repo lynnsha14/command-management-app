@@ -12,7 +12,9 @@ Route::get('/', function () {
 
 });
 
-Auth::routes();
+Auth::routes([
+    "register" => false
+]);
 
 Route::middleware("auth")->group(function (){
     Route::get('/home', 'AccountController@index')->name('home');
@@ -51,6 +53,8 @@ Route::middleware("auth")->group(function (){
     Route::resource('/sales', 'Resources\SalesController')->only("show","index")
         ->name("index","supplies.index")
         ->name("show","supplies.show");
+    /* Routes des notifivation */
+    Route::post("/notification","NotificationController@list")->name("notification_list");
 });
 
 
