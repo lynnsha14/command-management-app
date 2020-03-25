@@ -20,10 +20,10 @@
 ![Model de BD](https://raw.githubusercontent.com/M3HEENK-TECH/command-management-app/master/doc/db_model.png)
 
 ## Diagramme de cas d'utilisation
-![Model de BD](https://raw.githubusercontent.com/M3HEENK-TECH/command-management-app/master/doc/uc_dirgram.jpg)
+![Diagramme de cas d'utilisation](https://raw.githubusercontent.com/M3HEENK-TECH/command-management-app/master/doc/uc_diagram.jpg)
 
 ## Diagramme de classe
-![Model de BD](https://raw.githubusercontent.com/M3HEENK-TECH/command-management-app/master/doc/class_dirgram.jpg)
+![Diagramme de classe](https://raw.githubusercontent.com/M3HEENK-TECH/command-management-app/master/doc/class_dirgram.jpg)
 
 
 ## Fichier SQL de la base de donnees
