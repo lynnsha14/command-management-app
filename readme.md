@@ -14,7 +14,7 @@
 * Faire une Pull
 <pre>git add .</pre>
 <pre>git commit -m "Le message des changements"</pre>
-<pre>git push -u orign master</pre>
+<pre>git push -u orign beta</pre>
 
 ## Model Physique  de la base de donnees
 ![Model de BD](https://raw.githubusercontent.com/M3HEENK-TECH/command-management-app/master/doc/db_model.png)
