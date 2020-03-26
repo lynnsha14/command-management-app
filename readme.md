@@ -14,7 +14,7 @@
 * Faire une Pull
 <pre>git add .</pre>
 <pre>git commit -m "Le message des changements"</pre>
-<pre>git push -u orign beta</pre>
+<pre>git push -u orign master</pre>
 
 ## Model Physique  de la base de donnees
 ![Model de BD](https://raw.githubusercontent.com/M3HEENK-TECH/command-management-app/master/doc/db_model.png)
@@ -29,18 +29,11 @@
 ## Fichier SQL de la base de donnees
  * Fichier : doc/bd.sql
  
-### Demarrer l'application : Executer les commandes suivantes
-* Creer le fichier de configuration laravel
-<pre>
- cp .env.example .env
-</pre>
-* Creer la base de donnees
+## Base  de donnees 
+* Creer la base de donnees et lancer les migration
 <pre>
 mysql -u root -p  -e "create database command_app2020"
 </pre>
-* lancer les migration
 <pre>
 php artisan migrate
 </pre>
-
-

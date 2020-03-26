@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Resources;
 
+use App\Http\Requests\SupliesRequest;
 use App\Models\Supply;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -34,7 +35,7 @@ class SuppliesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SupliesRequest $request)
     {
         //
     }
@@ -68,7 +69,7 @@ class SuppliesController extends Controller
      * @param  \App\Models\Supply  $supply
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Supply $supply)
+    public function update(SupliesRequest $request, Supply $supply)
     {
         //
     }
