@@ -20,38 +20,30 @@ class RedirectIfAuthenticated
     /**
      * Create a new filter instance.
      *
-     * @param  Guard  $auth
+     * @param Guard $auth
      * @return void
      */
     public function __construct(Guard $auth)
     {
         $this->auth = $auth;
     }
+
     /**
      * Handle an incoming request.
      *
-     * @param  Request  $request
-     * @param  \Closure  $next
+     * @param Request $request
+     * @param Closure $next
+     * @param string $role
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next,$role)
     {
-        if ($this->auth->check()) {
+        if ( !$this->auth->check() ) {
+            abort(403,"Vou devez vous authentifier pour acceder a cette page");
+        }
 
-            $auth = Auth::user()->roles()->first();
-
-            switch ($auth->role) {
-                case 'admin':
-                    return  redirect()->route('admin');
-                    break;
-                case 'cashier':
-                    return  redirect()->route('cashiers.index');
-                    break;
-                default:
-                    return  redirect()->route('home');
-                    break;
-            }
-
+        if ( !$this->auth->user()->role != $role ) {
+            abort(404);
         }
 
         return $next($request);

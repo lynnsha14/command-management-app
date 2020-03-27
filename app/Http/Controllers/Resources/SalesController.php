@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\Resources;
 
-use App\Http\Requests\SalesRequest;
+use App\Http\Requests\StoreSalesRequest;
+use App\Http\Requests\UpdateSalesRequest;
 use App\Models\Sale;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -35,7 +36,7 @@ class SalesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(SalesRequest $request)
+    public function store(StoreSalesRequest $request)
     {
         //
     }
@@ -69,7 +70,7 @@ class SalesController extends Controller
      * @param  \App\Models\Sale  $sale
      * @return \Illuminate\Http\Response
      */
-    public function update(SalesRequest $request, Sale $sale)
+    public function update(UpdateSalesRequest $request, Sale $sale)
     {
         //
     }
