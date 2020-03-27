@@ -33,16 +33,17 @@ class RedirectIfAuthenticated
      *
      * @param Request $request
      * @param Closure $next
-     * @param string $role
+     * @param string $role Role utilisateur
      * @return mixed
      */
     public function handle($request, Closure $next,$role)
     {
+        // Utilisateur Non connecter
         if ( !$this->auth->check() ) {
             abort(403,"Vou devez vous authentifier pour acceder a cette page");
         }
-
-        if ( !$this->auth->user()->role != $role ) {
+        //Unitilisateur connecter mais avec un mauvais role
+        if (!empty($role) AND !$this->auth->user()->role != $role ) {
             abort(404);
         }
 
