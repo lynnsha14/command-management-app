@@ -12,12 +12,11 @@ Route::get('/', function () {
 
 });
 
-Auth::routes([
-    "register" => false
-]);
+Auth::routes();
 
 Route::middleware("auth")->group(function (){
     Route::get('/home', 'AccountController@index')->name('home');
+
     /* Controller des caissiers */
     Route::resource('/cashiers', 'Resources\CashiersController')
         ->name("index","cashiers.index")
@@ -53,8 +52,4 @@ Route::middleware("auth")->group(function (){
     Route::resource('/sales', 'Resources\SalesController')->only("show","index")
         ->name("index","supplies.index")
         ->name("show","supplies.show");
-    /* Routes des notifivation */
-    Route::post("/notification","NotificationController@list")->name("notification_list");
 });
-
-
