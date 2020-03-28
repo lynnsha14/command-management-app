@@ -21,7 +21,7 @@ class RoleMiddleware
         if ( !Auth::check() ) {
             abort(403,"Vous devez vous authentifier pour acceder a cette page");
         }
-        
+
         //Exception si l'utilisateur est connecter avec un mauvais privileege
         if( Auth::user()->role != $role ) {
             abort(403,"Vous n'avez les droit d'acces a cette page");
