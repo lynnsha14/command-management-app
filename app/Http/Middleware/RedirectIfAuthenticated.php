@@ -3,48 +3,22 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Contracts\Auth\Guard;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class RedirectIfAuthenticated
 {
-
-    /**
-     * The Guard implementation.
-     *
-     * @var Guard
-     */
-    protected $auth;
-
-    /**
-     * Create a new filter instance.
-     *
-     * @param Guard $auth
-     * @return void
-     */
-    public function __construct(Guard $auth)
-    {
-        $this->auth = $auth;
-    }
-
     /**
      * Handle an incoming request.
      *
-     * @param Request $request
-     * @param Closure $next
-     * @param string $role Role utilisateur
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @param  string|null  $guard
      * @return mixed
      */
-    public function handle($request, Closure $next,$role)
+    public function handle($request, Closure $next, $guard = null)
     {
-        // Utilisateur Non connecter
-        if ( !$this->auth->check() ) {
-            abort(403,"Vou devez vous authentifier pour acceder a cette page");
-        }
-        //Unitilisateur connecter mais avec un mauvais role
-        if (!empty($role) AND !$this->auth->user()->role != $role ) {
-            abort(404);
+        if (Auth::guard($guard)->check()) {
+            return redirect('/home');
         }
 
         return $next($request);
