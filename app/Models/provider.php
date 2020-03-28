@@ -8,7 +8,7 @@ class provider extends Model
 {
     protected $primaryKey = "id";
 
-    protected $table = "supplies";
+    protected $table = "providers";
 
     protected $fillable = [
         "name",

@@ -16,6 +16,8 @@ class Sale extends Model
         "cashier_id",
     ];
 
+    const UPDATED_AT = null;
+
 
     public function product(){
         return $this->belongsTo(product::class,"product_id","id");
@@ -24,4 +26,5 @@ class Sale extends Model
     public function cashier(){
         return $this->belongsTo(product::class,"cashier_id","id");
     }
+
 }
