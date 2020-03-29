@@ -37,3 +37,14 @@ mysql -u root -p  -e "create database command_app2020"
 <pre>
 php artisan migrate
 </pre>
+
+### Middlewares :
+* Middleware des roles : RoleMiddleware
+
+### Configuration des models :
+* Ajout des proprietes $primaryKey, $tables, $fillable
+* Ajout des SoftDeletes
+* Ajout des functions de relation entre tables: HasManyn BelongToMany ...
+
+### Seeder la base de donnees :
+<pre> php artisan migrate:fresh --seed </pre>
