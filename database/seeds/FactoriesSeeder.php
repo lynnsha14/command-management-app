@@ -11,18 +11,17 @@ class FactoriesSeeder extends Seeder
      */
     public function run()
     {
-        $number = 20;
         //Seeding des caissiers
-        $cashiers = factory(\App\Models\User::class,10)->create();
+        $cashiers = factory(\App\Models\User::class,20)->create();
 
         //Seeding des produits
-        factory(\App\Models\product::class,10)
+        factory(\App\Models\product::class,20)
             ->create()
             ->each(function (\App\Models\product $product){
             //Seeding des Tables dependant des produits
             $product->supplies()
                 ->saveMany(
-                        factory(\App\Models\Supply::class,10)->make([
+                        factory(\App\Models\Supply::class,20)->make([
                             "provider_id" => factory(\App\Models\provider::class)
                                             ->create()
                                             ->id
@@ -30,7 +29,7 @@ class FactoriesSeeder extends Seeder
             );
 
             $product->sales()->saveMany(
-                factory(\App\Models\Sale::class,10)->make()
+                factory(\App\Models\Sale::class,20)->make()
             );
         });
     }
