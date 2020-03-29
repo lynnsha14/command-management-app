@@ -42,8 +42,8 @@ php artisan migrate
 * Middleware des roles : RoleMiddleware
 
 ### Configuration des models :
-* Ajout des proprietes $primaryKey, $tables, $fillable
-* Ajout des SoftDeletes
+* Ajout des proprietes $primaryKey, $table, $fillable
+* Ajout des SoftDeletes, Norifiable
 * Ajout des functions de relation entre tables: HasManyn BelongToMany ...
 
 ### Seeder la base de donnees :
