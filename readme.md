@@ -48,16 +48,16 @@ php artisan migrate
 
 
 ### Seeder la base de donnees :
-#### Commandes 
+* Commandes 
     `<pre> php artisan migrate:fresh --seed </pre>
-#### Comptes : 
+* Comptes : 
 
 |Email| Mot de passe|
 |:--------|:----------|
 |admin@gmail.com| password|
 |cashier@cashier.com| password|
 
-#### Nombre d'enregistremenrts dans les tables 20 
-#### Fichier de seeding avec les Factories : **datbase/seeds/FactoriesSeeder**
-#### Fichier de seeding des utilisateurs : /**databse/seeds/UserTableSeeder**
+* Nombre d'enregistremenrts dans les tables 20 
+* Fichier de seeding avec les Factories : **datbase/seeds/FactoriesSeeder**
+* Fichier de seeding des utilisateurs : /**databse/seeds/UserTableSeeder**
 
