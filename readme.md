@@ -28,19 +28,36 @@
 
 ## Fichier SQL de la base de donnees
  * Fichier : doc/bd.sql
- 
-### Demarrer l'application : Executer les commandes suivantes
-* Creer le fichier de configuration laravel
-<pre>
- cp .env.example .env
-</pre>
-* Creer la base de donnees
+
+## Base  de donnees
+* Creer la base de donnees et lancer les migration
 <pre>
 mysql -u root -p  -e "create database command_app2020"
 </pre>
-* lancer les migration
 <pre>
 php artisan migrate
 </pre>
 
+### Middlewares :
+* Middleware des roles : RoleMiddleware
+
+### Configuration des models :
+* Ajout des proprietes $primaryKey, $table, $fillable
+* Ajout des SoftDeletes, Norifiable
+* Ajout des functions de relation entre tables: HasManyn BelongToMany ...
+
+
+### Seeder la base de donnees :
+* Commandes 
+    `<pre> php artisan migrate:fresh --seed </pre>
+* Comptes : 
+
+|Email| Mot de passe|
+|:--------|:----------|
+|admin@gmail.com| password|
+|cashier@cashier.com| password|
+
+* Nombre d'enregistremenrts dans les tables 20 
+* Fichier de seeding avec les Factories : **datbase/seeds/FactoriesSeeder**
+* Fichier de seeding des utilisateurs : /**databse/seeds/UserTableSeeder**
 

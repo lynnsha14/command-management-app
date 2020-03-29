@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Resources;
 
-use App\Http\Requests\StoreUserRequest;
-use App\Http\Requests\UpdateUserRequest;
-use App\Models\User;
+use App\Http\Requests\storeProductRequest;
+use App\Http\Requests\updateProductRequest;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class CashiersController extends Controller
+class ProductsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,16 +27,16 @@ class CashiersController extends Controller
      */
     public function create()
     {
-
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  storeProductRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreUserRequest $request)
+    public function store(storeProductRequest $request)
     {
         //
     }
@@ -44,10 +44,10 @@ class CashiersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(Product $product)
     {
         //
     }
@@ -55,10 +55,10 @@ class CashiersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Product $product)
     {
         //
     }
@@ -66,11 +66,11 @@ class CashiersController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
+     * @param  updateProductRequest$request
+     * @param  Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUserRequest $request, User $user)
+    public function update(UpdateProductRequest $request, Product $product)
     {
         //
     }
@@ -78,10 +78,10 @@ class CashiersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $user
+     * @param  Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Product $product)
     {
         //
     }

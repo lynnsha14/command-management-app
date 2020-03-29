@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Resources;
 
+use App\Http\Requests\StoreSuppliesRequest;
+use App\Http\Requests\UpdateSuppliesRequest;
 use App\Models\Supply;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -34,7 +36,7 @@ class SuppliesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreSuppliesRequest $request)
     {
         //
     }
@@ -68,7 +70,7 @@ class SuppliesController extends Controller
      * @param  \App\Models\Supply  $supply
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Supply $supply)
+    public function update(UpdateSuppliesRequest $request, Supply $supply)
     {
         //
     }
