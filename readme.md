@@ -14,7 +14,7 @@
 * Faire une Pull
 <pre>git add .</pre>
 <pre>git commit -m "Le message des changements"</pre>
-<pre>git push -u orign master</pre>
+<pre>git push -u orign beta</pre>
 
 ## Model Physique  de la base de donnees
 ![Model de BD](https://raw.githubusercontent.com/M3HEENK-TECH/command-management-app/master/doc/db_model.png)
@@ -37,3 +37,27 @@ mysql -u root -p  -e "create database command_app2020"
 <pre>
 php artisan migrate
 </pre>
+
+### Middlewares :
+* Middleware des roles : RoleMiddleware
+
+### Configuration des models :
+* Ajout des proprietes $primaryKey, $table, $fillable
+* Ajout des SoftDeletes, Norifiable
+* Ajout des functions de relation entre tables: HasManyn BelongToMany ...
+
+
+### Seeder la base de donnees :
+* Commandes 
+    `<pre> php artisan migrate:fresh --seed </pre>
+* Comptes : 
+
+|Email| Mot de passe|
+|:--------|:----------|
+|admin@gmail.com| password|
+|cashier@cashier.com| password|
+
+* Nombre d'enregistremenrts dans les tables 20 
+* Fichier de seeding avec les Factories : **datbase/seeds/FactoriesSeeder**
+* Fichier de seeding des utilisateurs : /**databse/seeds/UserTableSeeder**
+
