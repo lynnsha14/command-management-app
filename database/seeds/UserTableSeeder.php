@@ -18,5 +18,13 @@ class UserTableSeeder extends Seeder
             "profile_image" => null,
             "role" => "admin"
         ]);
+
+        \Illuminate\Support\Facades\DB::table("users")->insert([
+            'name'=> "stevy",
+            'email'=> "stevy@gmail.com",
+            'password' => bcrypt("password"),
+            "profile_image" => null,
+            "role" => "cashier"
+        ]);
     }
 }
