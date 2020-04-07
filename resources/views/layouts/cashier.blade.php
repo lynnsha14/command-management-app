@@ -71,14 +71,22 @@
         </div>
     </nav>
 
-    <main class="py-4 container">
-        <div class="row">
 
-            <div class="col-md-12">
+    <main class="py-4">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a class="list-group-item" href="{{route("sales.index")}}">Ventes</a>
+                    <a class="list-group-item" href="{{route("notification_list")}}">Notification</a>
+                </div>
+            </div>
+            <div class="col-md-9">
                 @yield('content')
             </div>
         </div>
     </main>
+
+
 </div>
 </body>
 </html>

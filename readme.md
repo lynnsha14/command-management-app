@@ -111,3 +111,18 @@ php artisan migrate
 |        | GET|HEAD  | supplies/{supply}         | supplies.show        | App\Http\Controllers\Resources\SuppliesController@show                 | web,auth,role:admin         |
 |        | DELETE    | supplies/{supply}         | supplies.destroy     | App\Http\Controllers\Resources\SuppliesController@destroy              | web,auth,role:admin         |
 |        | GET|HEAD  | supplies/{supply}/edit    | supplies.edit        | App\Http\Controllers\Resources\SuppliesController@edit                 | web,auth,role:admin         |
+
+## Taches :
+
+#### Mise en places de la structure
+
+#### Configuration des models
+
+#### Seeding de la base de donnees
+
+### Espace utilisateur
+* Creation du middleware : RoleMiddleware
+* Creation des routes d'espace utilisateur
+* Creation des layout pour l'espace utilisateur
+* Creation des vues pour l'espace utilisateur
+    * /home/admin et /home/cashier

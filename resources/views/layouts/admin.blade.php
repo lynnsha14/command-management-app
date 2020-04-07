@@ -74,9 +74,22 @@
 
     <main class="py-4 container ">
         <div class="row">
-            <div class="col-md-12">
+
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a class="list-group-item" href="{{route("cashiers.index")}}">Caissiers</a>
+                    <a class="list-group-item" href="{{route("products.index")}}">Produits</a>
+                    <a class="list-group-item" href="{{route("providers.index")}}">Fournisseurs</a>
+                    <a class="list-group-item" href="{{route("supplies.index")}}">Approvisionements</a>
+                    <a class="list-group-item" href="{{route("sales.index")}}">Ventes</a>
+                    <a class="list-group-item" href="{{route("notification_list")}}">Notification</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
                 @yield('content')
             </div>
+
         </div>
     </main>
 </div>
