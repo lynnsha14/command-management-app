@@ -4,17 +4,26 @@
 
 # Notes
 
-##  Faire une Push
+##  Faire une Push et pull
 
-* Faire le push
-<pre>git init</pre>
+* Faire le push (Envoyer)
+<pre>git init </pre>
+<pre>git add README.md </pre>
+<pre>git commit -m "first commit"</pre>
 <pre>git remote add origin https://github.com/M3HEENK-TECH/command-management-app.git</pre>
-<pre>git pull  https://github.com/M3HEENK-TECH/command-management-app.git master</pre>
+<pre>git push -u origin beta</pre>
 
-* Faire une Pull
-<pre>git add .</pre>
-<pre>git commit -m "Le message des changements"</pre>
-<pre>git push -u orign beta</pre>
+* ou uniquement 
+
+<pre>git remote add origin https://github.com/M3HEENK-TECH/command-management-app.git</pre>
+<pre>git push -u origin beta</pre>
+
+
+* Faire une Pull (Récupérer)
+
+<pre>git clone https://github.com/M3HEENK-TECH/command-management-app.git</pre>
+- Ou
+<pre>git pull -u origin master</pre>
 
 ## Model Physique  de la base de donnees
 ![Model de BD](https://raw.githubusercontent.com/M3HEENK-TECH/command-management-app/master/doc/db_model.png)
